@@ -11,15 +11,45 @@ def get_downloads_folder():
 def move_files_to_destination(download_folder):
     """Move files from the Downloads folder to their respective destination folders."""
     destination_folders = {
+        # Document files
         'pdf': os.path.join(download_folder, 'pdf'),
         'docx': os.path.join(download_folder, 'docx'),
-        'mp4': os.path.join(download_folder, 'mp4'),
+        'doc': os.path.join(download_folder, 'docx'),
+        'txt': os.path.join(download_folder, 'text_files'),
+        
+        # Video files
+        'mp4': os.path.join(download_folder, 'videos'),
+        'mkv': os.path.join(download_folder, 'videos'),
+        'avi': os.path.join(download_folder, 'videos'),
+        'mov': os.path.join(download_folder, 'videos'),
+        'wmv': os.path.join(download_folder, 'videos'),
+        'flv': os.path.join(download_folder, 'videos'),
+        'mpeg': os.path.join(download_folder, 'videos'),
+        '3gp': os.path.join(download_folder, 'videos'),
+        
+        # Image files
         'jpg': os.path.join(download_folder, 'Pictures'),
         'jpeg': os.path.join(download_folder, 'Pictures'),
         'png': os.path.join(download_folder, 'Pictures'),
-        'txt': os.path.join(download_folder, 'text_files'),
+        'gif': os.path.join(download_folder, 'Pictures'),
+        'bmp': os.path.join(download_folder, 'Pictures'),
+        'svg': os.path.join(download_folder, 'Pictures'),
+        
+        # Audio files
+        'mp3': os.path.join(download_folder, 'audio'),
+        'wav': os.path.join(download_folder, 'audio'),
+        'ogg': os.path.join(download_folder, 'audio'),
+        'flac': os.path.join(download_folder, 'audio'),
+        'aac': os.path.join(download_folder, 'audio'),
+        'wma': os.path.join(download_folder, 'audio'),
+        
+        # Compressed files
         'zip': os.path.join(download_folder, 'zip_files'),
-        # Add more file types and their corresponding destination folders as needed
+        'rar': os.path.join(download_folder, 'zip_files'),
+        '7z': os.path.join(download_folder, 'zip_files'),
+        'tar': os.path.join(download_folder, 'zip_files'),
+        'gz': os.path.join(download_folder, 'zip_files'),
+        'bz2': os.path.join(download_folder, 'zip_files'),
     }
 
     # Create destination folders if they don't exist
