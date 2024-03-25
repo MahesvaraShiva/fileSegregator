@@ -1,5 +1,7 @@
 import os
 import shutil
+import tkinter as tk
+from tkinter import messagebox
 
 def get_downloads_folder():
     """Get the path to the user's Downloads folder."""
@@ -33,6 +35,9 @@ def move_files_to_destination(download_folder):
                 dest_folder = destination_folders[file_extension]
                 shutil.move(file_path, dest_folder)
                 print(f"Moved {filename} to {dest_folder}")
+
+    # Show pop-up message after files have been segregated
+    messagebox.showinfo("File Segregation Complete", "Easy -EJ")
 
 def main():
     """Main function to organize files in the Downloads folder."""
